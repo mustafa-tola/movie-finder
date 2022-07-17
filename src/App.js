@@ -16,12 +16,11 @@ function App() {
         {/* {Object.entries(movies).map((movie) => dispMovies?.includes(movie[0]) ? (
           <MoviePoster movie={movie} key={movie[0]} />
         ): null)} */}
-        {dispMovies != [] && searched ? (Object.entries(movies).map((movie) => dispMovies?.includes(movie[0]) ? (
+        {dispMovies.length != 0 && searched ? (Object.entries(movies).map((movie) => dispMovies?.includes(movie[0]) ? (
           <MoviePoster movie={movie} key={movie[0]} />
-        ): null)): (Object.entries(movies).map((movie) => <MoviePoster movie={movie} key={movie[0]} />
-        ))}
+        ): null)): dispMovies.length == 0 && !searched ? (Object.entries(movies).map((movie) => <MoviePoster movie={movie} key={movie[0]} />))
+        : null}
         {dispMovies.length == 0 && searched ? (<h1>No Results Found</h1>): null}
-        {console.log(dispMovies,searched)}
       </div>
     </div>
   );
