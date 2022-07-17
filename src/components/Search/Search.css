@@ -1,0 +1,13 @@
+#search {
+    width: 150px;
+    margin: 5px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#btn {
+    width: 50px;
+    background-color: rgb(167,159,255);
+    margin: 5px;
+    border-radius: 10px;
+}
